@@ -23,12 +23,12 @@ This PicoC code connects a `Room Ventilation Controller` function block to an an
 
 1. Insert a `Room Ventilation Controller` function block
 2. Insert a `Program` function block and copy the content from [`SEVentilation.c`](./SEVentilation.c) into the `Program` function block
-3. Connect function blocks and analog output
+3. Connect the inputs and outputs from the `Program` function block:
 
-   ### Inputs
+   ### `Program` function block inputs
 
    - **I1:** connect F (Fan) from Room Ventilation Controller - fan speed 0 - 100 %
-   - **I2:** connect Fea (Fan exhaust air) from Room Ventilation Controller - fan speed exhaust 0 - 10ö %
+   - **I2:** connect Fea (Fan exhaust air) from Room Ventilation Controller - fan speed exhaust 0 - 100 %
    - **I3:** connect Fsa (Fan supply air) from Room Ventilation Controller - fan speed supply 0 - 100 %
    - **I4:** connect He (Heat exchanger) from Room Ventilation Controller - heat exchange 0 = off; 1 = on
    - **I5:**<br>
@@ -36,18 +36,16 @@ This PicoC code connects a `Room Ventilation Controller` function block to an an
      1 = O1 exhaust only, O2 supply only<br>
      2 = O1 supply only, O2 exhaust only
 
-   ### Outputs
+   ### `Program` function block outputs
 
    - **O1:** connect first (third, fith, ...) ventilation from a pair to an analog 0-10 V output (only 0-5 V are used; make sure to limit to max. 5 V)
    - **O2:** connect second (fourth, sixth, ...) ventilation from a pair to an analog 0-10 V output (only 0-5 V are used; make sure to limit to max. 5 V)
 
 ## Screenshots
 
-<details><summary>Loxone Config</summary>
+Loxone Config
 
 ![SEVentilation](./seventilation-screenshot.png)
-
-</details>
 
 ## Sample file
 
